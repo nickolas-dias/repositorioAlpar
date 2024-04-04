@@ -2,7 +2,8 @@
     --primary-color: #5e5ce6;
     --secondary-color: #ff5e5c;
     --background-color: #0f0c29;
-    --gradient: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    --text-color: #fff; 
+    --link-color: #000; 
 }
 
 body {
@@ -11,10 +12,20 @@ body {
     padding: 0;
     background: var(--background-color);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
     box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
 }
 
 a {
@@ -22,18 +33,19 @@ a {
     padding: 1rem 2rem;
     margin: 1rem;
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color); 
     border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    background: var(--gradient);
-    background-size: 200% 200%;
-    animation: background-animation 8s ease infinite;
+    background: linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red, violet);
+    background-size: 1600% 1600%;
+    animation: rainbow-background 10s linear infinite;
+    transform: scale(1);
 }
 
 a:hover {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
     background-position: right center;
+    transform: scale(1.1);
 }
 
 a:active, a:focus {
@@ -41,9 +53,11 @@ a:active, a:focus {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-
-@keyframes background-animation {
-    0% {background-position: left center}
-    50% {background-position: right center}
-    100% {background-position: left center}
+@keyframes rainbow-background {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
