@@ -1,62 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Login</title>
-</head>
-
-<body>
-
-    <div class="container" id="container">
-        <div class="form-container cadastrar">
-            <form action="./ativ3/index.html">
-                <h1>Criar Conta</h1>
-                <div class="rede-social">
-                    <a href="https://www.google.com/intl/pt-BR/gmail/about/" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="https://www.facebook.com/" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                </div>
-                <span>ou use seu e-mail para cadastr</span>
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Senha">
-                <button>Inscrever-se</button>
-            </form>
+    <title>Entrar</title>
+  </head>
+  <body>
+    <main id="container">
+      <form action="ativ3/index.html" id="login_form">
+        <div id="form_header">
+          <h1>Login</h1>
+          <i id="mode_icon" class="fa-solid fa-moon"></i>
         </div>
-        <div class="form-container entrar">
-            <form action="./ativ3/index.html">
-                <h1>Entrar</h1>
-                <div class="rede-social">
-                    <a href="https://www.google.com/intl/pt-BR/gmail/about/" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="https://www.facebook.com/" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                </div>
-                <span>ou use sua senha de e-mail</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Senha">
-                <a href="#">Esqueceu sua senha?</a>
-                <button>Entrar</button>
-            </form>
+
+        <div id="social_media">
+          <a href="https://www.facebook.com/">
+            <img src="facebook.png" alt="Facebook Logo" />
+          </a>
+
+          <a href="https://www.google.com/intl/pt-BR/account/about/">
+            <img src="google.png" alt="Google Logo" />
+          </a>
+
+          <a href="https://github.com/login">
+            <img src="github.png" alt="Github Logo" />
+          </a>
         </div>
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Bem vindo</h1>
-                    <p>Insira seus dados pessoais para usar todos os recursos do site</p>
-                    <button class="hidden" id="login">Cadastre-se</button>
-                </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Olá amigo!</h1>
-                    <p>Registre-se com seus dados pessoais para usar todos os recursos do site</p>
-                    <button class="hidden" id="register">Cadastre-se</button>
-                </div>
+
+        <div id="inputs">
+          <div class="inputbox">
+            <label for="name">
+              Nome
+              <div class="input-field">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="name" name="name" />
+              </div>
+            </label>
+          </div>
+
+          <div class="inputbox">
+            <label for="email">
+              E-mail
+              <div class="input-field">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" id="email" name="email" />
+              </div>
+            </label>
+          </div>
+
+          <div class="inputbox">
+            <label for="Password">
+              Senha
+              <div class="input-field">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" id="password" name="password" />
+              </div>
+            </label>
+
+            <div id="forgot_password">
+              <a href="#">Esqueceu sua senha</a>
             </div>
+          </div>
         </div>
-    </div>
 
-    <script src="script.js"></script>
-</body>
-
+        <button type="submit" id="login_button">Login</button>
+      </form>
+    </main>
 </html>
