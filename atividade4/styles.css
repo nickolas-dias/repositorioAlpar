@@ -50,7 +50,6 @@ header img {
   }
 }
 
-
 main {
   display: flex;
   flex-direction: column;
@@ -73,13 +72,13 @@ video {
   border-radius: 10px;
   margin-top: 20px;
   width: 95%;
-  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1); 
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease-in-out;
 }
 
 .episodio:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.2); 
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.2);
 }
 
 .episode-info {
@@ -88,28 +87,28 @@ video {
 
 .episodio h2 {
   color: var(--accent-color);
-  margin-top: 10px; 
-  margin-bottom: 5px; 
-  font-size: 1.5em; 
-  text-transform: uppercase; 
-  letter-spacing: 1px; 
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .episodio p {
-  color: #ccc; 
-  margin-bottom: 10px; 
-  font-size: 1.1em; 
-  line-height: 1.4; 
+  color: #ccc;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  line-height: 1.4;
 }
 
 .episodio a {
   color: var(--accent-color);
-  text-decoration: none; 
-  transition: color 0.3s; 
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .episodio a:hover {
-  color: #fff; 
+  color: #fff;
 }
 
 .audio-player {
@@ -129,4 +128,27 @@ footer {
   width: 100%;
   max-width: 800px;
   margin: 20px auto;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 150px;
+  }
+
+  header img {
+    width: 150px;
+    height: 150px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .episodio {
+    width: 90%;
+  }
+
+  audio {
+    width: calc(100% - 40px);
+  }
 }
