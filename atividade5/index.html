@@ -1,11 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 5</title>
-</head>
-<body>
-    <h1>Atividade 5</h1>
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POKEDEX</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
+    <script type="module" defer src="config.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="title_card">
+        <div class="pokemon_title">
+          <div class="pokemon_icon">
+            <img src="" alt="" />
+          </div>
+          <h1>Pesquise o Pokemon</h1>
+        </div>
+        <div class="pokemon_card">
+          <img src="img/icon_card.png" />
+          <p>Carta Pokemon #<span class="idPokemon">000</span></p>
+        </div>
+        <div class="search-pokemon">
+          <input
+            type="text"
+            placeholder="Pesquise Pokemon pelo Nº ou Nome"
+            class="pokemonById"
+            value=""
+          />
+          <button class="btnSearch">Pesquisar</button>
+        </div>
+        <div class="error-found">
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="card_item">
+        <div class="card">
+          <div class="card_title">
+            <div class="pokemon_name">
+              <h2>Nome Pokemon</h2>
+            </div>
+            <div class="hp">
+              <span>PS</span>
+              <h2>??</h2>
+              <div class="icon-type">
+                <img src="img/icon_card.png" />
+              </div>
+            </div>
+          </div>
+          <div class="pokemon">
+            <div class="basic">
+              <p>BASICO</p>
+            </div>
+            <div id="pokemon-display">
+              <img src="img/Pokémon.png" />
+            </div>
+          </div>
+          <div class="details_small">
+            <p>
+              Pokemon Altura: <span id="height"></span> Peso:
+              <span id="weight"></span>
+            </p>
+          </div>
+          <div class="details_pokemon">
+            <div class="power_1">
+              <div class="name_power">
+                <img src="img/none.png" />
+                <h3>Primeira Habilidade</h3>
+              </div>
+              <div class="description_power">
+                <p class="effectpower1">Short description ability</p>
+              </div>
+            </div>
+            <div class="power_2">
+              <div class="name_power">
+                <img src="img/none.png" />
+                <h3>Segunda Habilidade</h3>
+                <div class="increase_power"></div>
+              </div>
+              <div class="description_power">
+                <p class="effectpower2">Short description ability</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer_card">
+            <p class="text">
+              <i
+                >Por algum tempo após o seu nascimento, ele cresce obtendo nutrição da semente em suas costas.</i>
+            </p>
+
+            <div class="pokemon_stats">
+              <div class="item_1">
+                <p>Defesa</p>
+                <div class="defense"><p>??</p></div>
+              </div>
+              <div class="item_2">
+                <p>Resistencia</p>
+              </div>
+              <div class="item_3">
+                <p>Ataque</p>
+                <div class="attack"><p>??</p></div>
+              </div>
+            </div>
+            <div class="footer_small">
+              <p>DPB#</p>
+              <span>&#xa9;2007 Pokemon/Nintendo</span>
+              <div class="number_card">
+                <img src="img/symbol.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <a href=>Nickolas</a>
+    </div>
+
+  </body>
 </html>
