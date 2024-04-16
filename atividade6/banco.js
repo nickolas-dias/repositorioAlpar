@@ -54,7 +54,7 @@ sacarBtn.addEventListener("click", () => {
             atualizarCarteira();
             mensagem.textContent = "Saque efetuado com sucesso.";
         } else {
-            mensagem.textContent ="Falha ao retirar dinheiro. Fundos insuficientes ou valor inválido."
+            mensagem.textContent ="Fundos insuficientes"
         }
     }
     clearInput
