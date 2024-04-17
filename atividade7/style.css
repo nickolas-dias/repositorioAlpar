@@ -1,0 +1,60 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2f2d2e;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.comodo {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #ccc;
+  width: 300px;
+}
+
+h2 {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ligar-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.desligar-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.status {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}

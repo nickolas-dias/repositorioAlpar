@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Iluminação</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Controle de Iluminação</h1>
+    <div class="comodo" id="sala">
+      <h2>Sala</h2>
+      <div class="btn-container">
+        <button class="ligar-btn" onclick="toggleLight('sala')">Ligar</button>
+        <button class="desligar-btn" onclick="toggleLight('sala')">
+          Desligar
+        </button>
+      </div>
+      <div class="status" id="salaStatus"></div>
+    </div>
+
+    <div class="comodo" id="cozinha">
+      <h2>Cozinha</h2>
+      <div class="btn-container">
+        <button class="ligar-btn" onclick="toggleLight('cozinha')">
+          Ligar
+        </button>
+        <button class="desligar-btn" onclick="toggleLight('cozinha')">
+          Desligar
+        </button>
+      </div>
+      <div class="status" id="cozinhaStatus"></div>
+    </div>
+
+    <div class="comodo" id="quato">
+      <h2>Quarto</h2>
+      <div class="btn-container">
+        <button class="ligar-btn" onclick="toggleLight('quarto')">Ligar</button>
+        <button class="desligar-btn" onclick="toggleLight('quarto')">
+          Desligar
+        </button>
+      </div>
+      <div class="status" id="quartoStatus"></div>
+    </div>
+
+    <div class="comodo" id="banheiro">
+      <h2>Banheiro</h2>
+      <div class="btn-container">
+        <button class="ligar-btn" onclick="toggleLight('banheiro')">
+          Ligar
+        </button>
+        <button class="desligar-btn" onclick="toggleLight('banheiro')">
+          Desligar
+        </button>
+      </div>
+      <div class="status" id="banheiroStatus"></div>
+    </div>
+
+    <script src="iluminacao.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
