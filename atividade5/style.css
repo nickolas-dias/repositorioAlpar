@@ -9,9 +9,11 @@
 }
 
 body {
-  background: linear-gradient(60deg, #232526 0%, #414345 100%);
+  background: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
   min-height: 100vh;
   place-items: center;
+  overflow: hidden;
 }
 
 /*  ----- Header ----- */
@@ -21,6 +23,58 @@ header {
   justify-content: center;
   text-align: center;
   align-content: center;
+}
+
+.background-video {
+  position: fixed;
+  z-index: -1;
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100vw;
+  top: 50%;
+  left: 50%;
+  filter: opacity(50%);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.sound {
+  position: absolute;
+  cursor: pointer;
+  right: 15%;
+  top: 50%;
+}
+
+.click-here {
+  transform: translateY(35px);
+  animation: clicksound 3s infinite;
+}
+
+@keyframes clicksound {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.sound img {
+  width: 40px;
+  position: absolute;
+}
+
+.btn-unmute {
+  display: none;
 }
 
 .title_card {
@@ -80,8 +134,6 @@ header {
   }
 }
 
-/*  ----- Titulo Carta ----- */
-
 .title_card h1 {
   display: inline-block;
 }
@@ -135,8 +187,6 @@ section {
   color: #eeaa41;
 }
 
-/* ---- item Carta ---- */
-
 .card_item {
   width: 285px;
   background-color: #f8e150;
@@ -155,8 +205,6 @@ section {
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4);
   height: auto;
 }
-
-/*  ----- Nome Pokemon Carta ---- */
 
 .card_title {
   display: flex;
@@ -194,8 +242,6 @@ section {
 .hp img {
   width: 20px;
 }
-
-/* ----- Pokemon Img ----- */
 
 .pokemon {
   position: relative;
@@ -256,8 +302,6 @@ section {
   }
 }
 
-/* ---- Detalhe Poder Pokemon ----- */
-
 .details_pokemon .power_1 .name_power,
 .details_pokemon .power_2 .name_power {
   display: flex;
@@ -296,8 +340,6 @@ section {
 .name_power .increase_power span {
   font-size: 13px;
 }
-
-/* ----- Footer Carta ----- */
 
 .footer_card {
   margin-top: 20px;
@@ -359,8 +401,6 @@ section {
   justify-content: center;
 }
 
-/* ----- Footer ----- */
-
 .footer_small {
   display: flex;
   justify-content: space-between;
@@ -391,7 +431,7 @@ section {
 .footer {
   text-align: center;
   position: relative;
-  margin-top: 8em;
+  margin-top: 3em;
   color: white;
 }
 

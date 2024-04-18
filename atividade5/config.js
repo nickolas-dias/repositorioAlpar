@@ -1,6 +1,5 @@
 export const API_URL = "https://pokeapi.co/api/v2/pokemon/";
 
-// Declarando
 const pokemonName = document.querySelector('.pokemon_name h2');
 const pokemonTitle = document.querySelector('.pokemon_title h1');
 const pokemonIcon = document.querySelector('.pokemon_icon img');
@@ -41,7 +40,7 @@ const cardColors = {
 };
 
 
-// Buscar API
+
 const renderSpinner = function(parentEl) {
     const pokemonRender = `
         <div class="spinner">
@@ -58,7 +57,6 @@ const getPokemon = async querry => {
         renderSpinner(pokemonRender)
     const response = await fetch(`${API_URL}${querry}`);
 
-    // Erro API
     response.status == 404 ?
         document.querySelector('.error-found span').textContent = `Desculpe, não encontramos este Pokémon 😞 !`
         :
@@ -82,8 +80,7 @@ const getPokemon = async querry => {
         hp.textContent  = ` ${base_stat}`;
         weightPokemon.textContent  = `${weight / 10} kg`;
         heightPokemon.textContent  = `${height * 10} cm`; 
-
-        // Primeira Habilidade + Descrição
+o
 
         power1.textContent  = `${first.toUpperCase()}`;
         const fetchDetailFirstAbility = await fetch(detailFirstAbility);
@@ -91,7 +88,6 @@ const getPokemon = async querry => {
         const {effect_entries: [{short_effect: short_effectDe}, {language: {name: nameLang2},short_effect: short_effectEn}]} = firstAbility;
         effectPower1.textContent  = `${(short_effectEn && nameLang2 === "en") ? short_effectEn : short_effectDe}`;
 
-        // Segunda Habilidade + Descrição
 
         if (pokemon.abilities[1]) {
             const {ability: {name: second, url: detailSecondAbility}} = pokemon.abilities[1];
@@ -107,7 +103,6 @@ const getPokemon = async querry => {
             power2.textContent  = ``;
         }
 
-        // Cor da Carta = Tipo Pokemon
 
         card.style.backgroundColor = cardColors[typesPokemon];
     } catch (error) {
@@ -116,7 +111,6 @@ const getPokemon = async querry => {
 
 }
 
-        // Botão Pesquisar
 
 const btnSearch = document.querySelector('.btnSearch');
 const idPokeApi = () => {
@@ -133,3 +127,24 @@ inputSearch.addEventListener("keyup", e => {
         btnSearch.click();
     }
 })
+
+document.querySelector('.background-video').volume=0.2;
+
+const btn = document.querySelector('.btn-mute');
+const btnUnmute = document.querySelector('.btn-unmute');
+const videoBackground = document.querySelector('.background-video');
+videoBackground.muted = true;
+
+btn.addEventListener('click', (e) => {
+    videoBackground.muted = false;
+    btnUnmute.style.display = 'block'
+    btn.style.display = 'none'
+    btnUnmute.removeEventListener('click', e);
+});
+
+btnUnmute.addEventListener('click', (e) => {
+    videoBackground.muted = true;
+    btnUnmute.style.display = 'none'
+    btn.style.display = 'block';
+    btn.removeEventListener('click', e);
+});

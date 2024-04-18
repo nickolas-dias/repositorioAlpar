@@ -1,49 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="rocket1.png" type="image/x-icon" />
-    <title>ALPAR ROCKET PROGRAM</title>
+    <link rel="shortcut icon" href="rocket.png" type="image/x-icon" />
+    <title>Alpar Rocket Program</title>
   </head>
-  <body>
-    <div class="scene">
-      <h1>ALPAR ROCKET PROGRAM</h1>
-      <a href="./atividade1/">Atividade 1</a><br />
-      <a href="./atividade2/">Atividade 2</a><br />
-      <a href="./atividade3/">Atividade 3</a><br />
-      <a href="./atividade4/">Atividade 4</a><br />
-      <a href="./atividade5/">Atividade 5</a><br />
-      <a href="./atividade6/">Atividade 6</a><br />
-      <a href="./atividade7/">Atividade 7</a><br />
 
-      <div class="rocket">
-        <img src="rocket.png" alt="" />
+  <body>
+    <div class="container">
+      <div class="glass-container">
+        <nav class="navbar">
+          <div class="logo">
+            <h1>Alpar Rocket Program</h1>
+          </div>
+        </nav>
+        <div class="content">
+          <div class="main">
+            <button class="btn"><a href="atividade1/">Atividade 1</a></button>
+            <button class="btn"><a href="atividade2/">Atividade 2</a></button>
+            <button class="btn"><a href="atividade3/">Atividade 3</a></button>
+            <button class="btn"><a href="atividade4/">Atividade 4</a></button>
+            <button class="btn"><a href="atividade5/">Atividade 5</a></button>
+            <button class="btn"><a href="atividade6/">Atividade 6</a></button>
+            <button class="btn"><a href="atividade7/">Atividade 7</a></button>
+          </div>
+          <div class="image-wrapper">
+            <img src="image.png" />
+          </div>
+        </div>
       </div>
     </div>
-    <script>
-      function stars() {
-        let count = 150;
-        let scene = document.querySelector(".scene");
-        let i = 0;
-        while (i < count) {
-          let star = document.createElement("i");
-          let x = Math.floor(Math.random() * window.innerWidth);
-          let duration = Math.random() * 1;
-          let h = Math.random() * 100;
-
-          star.style.left = x + "px";
-          star.style.width = 1 + "px";
-          star.style.height = 60 + "px";
-          star.style.animationDuration = duration + "s";
-
-          scene.appendChild(star);
-          i++;
-        }
-      }
-      stars();
-    </script>
   </body>
 </html>
