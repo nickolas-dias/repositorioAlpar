@@ -14,7 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url(image.jpg);
+  background: linear-gradient(135deg, #255ec1, #11696b);
 }
 
 .container {
