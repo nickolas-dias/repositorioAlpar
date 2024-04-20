@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <div class="form-input-container">
+          <input
+            type="search"
+            name="city-name"
+            id="city-input"
+            placeholder="Digite o nome da cidade"
+          />
+          <button id="search">Pesquisar</button>
+        </div>
+      </div>
+      <div id="weather-data" class="hide">
+        <h2><span id="city-name"></span></h2>
+        <p id="temperature"></p>
+        <p id="description"></p>
+        <img id="weather-icon" src="" alt="Condições atuais" />
+        <p id="humidity"></p>
+        <p id="wind-speed"></p>
+      </div>
+      <div id="error-message" class="hide">
+        <p>Não foi possível encontrar o clima para a cidade.</p>
+      </div>
+      <div id="loader" class="hide">
+        <i class="fa-solid fa-spinner"></i>
+      </div>
+    </div>
+    <script src="waeatherModel.js"></script>
+    <script src="weatherView.js"></script>
+    <script src="weatherController.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

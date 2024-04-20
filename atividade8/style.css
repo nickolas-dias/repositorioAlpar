@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(image.jpg);
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.form-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.form-input-container input[type="search"] {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  outline: none;
+}
+
+.form-input-container button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-input-container button:hover {
+  background-color: #0056b3;
+}
+
+#error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#loader {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+#weather-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+#weather-data h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#weather-data p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: center;
+}
